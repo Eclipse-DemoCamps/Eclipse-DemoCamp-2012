@@ -1,0 +1,6 @@
+
+
+Eclipse PDE, Maven Tycho and Maven Central - How to make them work together
+
+Timo Naroska, Adobe Systems
+

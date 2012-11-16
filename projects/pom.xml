@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.eclipse.democamp</groupId>
+    <artifactId>parent</artifactId>
+    <version>0.8.15-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>projects</artifactId>
+  <packaging>pom</packaging>
+
+  <!-- =========================================================================    Dependencies -->
+
+  <dependencies>
+    <dependency>
+      <groupId>org.eclipse.democamp</groupId>
+      <artifactId>target-platform</artifactId>
+      <version>${project.version}</version>
+	  <type>pom</type>
+    </dependency>
+  </dependencies>
+
+  <!-- ==============================================================================    Modules -->
+
+  <modules>
+    <module>com.adobe.myproject</module>
+    <module>com.adobe.myproject.test</module>
+  </modules>
+
+  <!-- ================================================================================    Build -->
+
+  <build>
+	<plugins>
+		<plugin>
+			<groupId>org.eclipse.tycho</groupId>
+			<artifactId>tycho-maven-plugin</artifactId>
+			<version>${tycho-version}</version>
+			<extensions>true</extensions>
+		</plugin>
+
+		<plugin>
+			<groupId>org.eclipse.tycho</groupId>
+			<artifactId>target-platform-configuration</artifactId>
+			<version>${tycho-version}</version>
+			<configuration>
+				<resolver>p2</resolver>
+				<target>
+					<artifact>
+						<groupId>org.eclipse.democamp</groupId>
+						<artifactId>target-platform</artifactId>
+						<version>${project.version}</version>
+						<classifier>demo</classifier>
+					</artifact>
+				</target>
+				<pomDependencies>consider</pomDependencies>
+				<environments>
+					<environment>
+						<os>macosx</os>
+						<ws>cocoa</ws>
+						<arch>x86_64</arch>
+					</environment>
+				</environments>
+			</configuration>
+		</plugin>
+	</plugins>
+  </build>
+</project>

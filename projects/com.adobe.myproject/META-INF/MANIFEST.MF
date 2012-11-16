@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Myproject
+Bundle-SymbolicName: com.adobe.myproject
+Bundle-Version: 0.8.15.qualifier
+Bundle-Activator: com.adobe.myproject.impl.Activator
+Bundle-Vendor: ADOBE
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.codehaus.jackson;version="1.9.11",
+ org.codehaus.jackson.map;version="1.9.11",
+ org.osgi.framework;version="1.7.0",
+ org.slf4j;version="1.6.4"
+Export-Package: com.adobe.myproject
+Bundle-ActivationPolicy: lazy

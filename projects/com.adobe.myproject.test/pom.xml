@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.eclipse.democamp</groupId>
+    <artifactId>projects</artifactId>
+    <version>0.8.15-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>com.adobe.myproject.test</artifactId>
+  <packaging>eclipse-test-plugin</packaging>
+</project>

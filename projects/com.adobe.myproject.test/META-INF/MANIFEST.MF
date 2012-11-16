@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test
+Bundle-SymbolicName: com.adobe.myproject.test
+Bundle-Version: 0.8.15.qualifier
+Bundle-Vendor: ADOBE
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.adobe.myproject,
+ org.osgi.framework;version="1.7.0",
+ org.osgi.util.tracker;version="1.5.1"
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.junit;bundle-version="4.10.0"
